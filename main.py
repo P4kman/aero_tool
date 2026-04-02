@@ -8,18 +8,20 @@ st.set_page_config(page_title="McLaren Aero Analysis", layout="wide")
 
 st.markdown("""
     <style>
-    .stApp { background-color: #0b0b0b; color: #f5f5f5; }
-   .stMetric { 
-        background-color: #1a1a1a !important; 
-        padding: 20px; 
-        border-radius: 10px; 
-        border-left: 5px solid #FF8700;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    /* Force Dark Mode on App and Sidebar */
+    .stApp, [data-testid="stSidebar"] {
+        background-color: #0b0b0b !important;
+        color: #f5f5f5 !important;
     }
-    /* This forces the metric labels and values to be white */
-    [data-testid="stMetricLabel"], [data-testid="stMetricValue"] {
+    
+    /* Fix Metric Visibility */
+    [data-testid="stMetricValue"], [data-testid="stMetricLabel"] {
         color: #ffffff !important;
     }
+
+    /* Make Sidebar Text and Inputs White */
+    [data-testid="stSidebar"] section[data-testid="stSidebarNav"] span {
+        color: white !important;
     }
     </style>
     """, unsafe_allow_html=True)
