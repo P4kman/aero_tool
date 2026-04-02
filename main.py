@@ -9,11 +9,17 @@ st.set_page_config(page_title="McLaren Aero Analysis", layout="wide")
 st.markdown("""
     <style>
     .stApp { background-color: #0b0b0b; color: #f5f5f5; }
-    .stMetric { 
-        background-color: #1a1a1a; 
-        padding: 15px; 
+   .stMetric { 
+        background-color: #1a1a1a !important; 
+        padding: 20px; 
         border-radius: 10px; 
-        border-left: 5px solid #FF8700; 
+        border-left: 5px solid #FF8700;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+    /* This forces the metric labels and values to be white */
+    [data-testid="stMetricLabel"], [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+    }
     }
     </style>
     """, unsafe_allow_html=True)
